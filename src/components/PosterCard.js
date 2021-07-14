@@ -1,7 +1,7 @@
 const PosterCard = (props) => {
   return (
     <div>
-      <img className="poster" src={`/images/poster/${props.image}`} />
+      <img className="poster" src={`${props.image}`} />
       <h5>{props.title}</h5>
       <p>{props.detail}</p>
       <button type="button" class="btn btn-primary">
