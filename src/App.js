@@ -1,26 +1,13 @@
 import "./App.css";
 
+import Navbar from "./components/Navbar";
+import PosterCard from "./components/PosterCard";
+
 function App() {
   return (
     <div className="App">
       <header>
-        <div className="nav-bar">
-          <nav className="container d-flex justify-content-between">
-            <ul>
-              <li>
-                <a href="#home">ACT TICKET</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="#about">MY TICKET</a>
-              </li>
-              <li>
-                <a href="#about">ACCOUNT</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <Navbar />
         <div
           id="carouselExampleSlidesOnly"
           className="carousel slide"
@@ -71,46 +58,46 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col">
-            <img className="poster" src="/images/poster/ironman.png" />
-            <div>Ironman3</div>
-            <button type="button" class="btn btn-primary">
-              GET TICKET
-            </button>
+            <PosterCard
+              image="ironman.png"
+              title="IRON MAN 3"
+              detail="13ส.ค.2561 - 21ส.ค.2561"
+            />
           </div>
           <div className="col">
-            <img className="poster" src="/images/poster/solo.png" />
-            <div>SOLO</div>
-            <button type="button" className="btn btn-primary">
-              GET TICKET
-            </button>
+            <PosterCard
+              image="batman.png"
+              title="BATMAN"
+              detail="13ส.ค.2561 - 21ส.ค.2561"
+            />
           </div>
           <div className="col">
-            <img className="poster" src="/images/poster/batman.png" />
-            <div>Batman</div>
-            <button type="button" className="btn btn-primary">
-              GET TICKET
-            </button>
+            <PosterCard
+              image="solo.png"
+              title="SOLO"
+              detail="13ส.ค.2561 - 21ส.ค.2561"
+            />
           </div>
           <div className="col">
-            <img className="poster" src="/images/poster/ironman.png" />
-            <div>Ironman3</div>
-            <button type="button" className="btn btn-primary">
-              GET TICKET
-            </button>
+            <PosterCard
+              image="ironman.png"
+              title="IRON MAN 3"
+              detail="13ส.ค.2561 - 21ส.ค.2561"
+            />
           </div>
           <div className="col">
-            <img className="poster" src="/images/poster/solo.png" />
-            <div>SOLO</div>
-            <button type="button" className="btn btn-primary">
-              GET TICKET
-            </button>
+            <PosterCard
+              image="batman.png"
+              title="BATMAN"
+              detail="13ส.ค.2561 - 21ส.ค.2561"
+            />
           </div>
           <div className="col">
-            <img className="poster" src="/images/poster/batman.png" />
-            <div>Batman</div>
-            <button type="button" className="btn btn-primary">
-              GET TICKET
-            </button>
+            <PosterCard
+              image="solo.png"
+              title="SOLO"
+              detail="13ส.ค.2561 - 21ส.ค.2561"
+            />
           </div>
         </div>
       </div>
