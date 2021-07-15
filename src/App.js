@@ -1,7 +1,9 @@
+import { newExpression } from "jest-snapshot/node_modules/@babel/types";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
 import PosterCard from "./components/PosterCard";
+import MovieData from "./data/movies.json";
 
 function App() {
   return (
@@ -57,48 +59,17 @@ function App() {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col">
-            <PosterCard
-              image="ironman.png"
-              title="IRON MAN 3"
-              detail="13ส.ค.2561 - 21ส.ค.2561"
-            />
-          </div>
-          <div className="col">
-            <PosterCard
-              image="batman.png"
-              title="BATMAN"
-              detail="13ส.ค.2561 - 21ส.ค.2561"
-            />
-          </div>
-          <div className="col">
-            <PosterCard
-              image="solo.png"
-              title="SOLO"
-              detail="13ส.ค.2561 - 21ส.ค.2561"
-            />
-          </div>
-          <div className="col">
-            <PosterCard
-              image="ironman.png"
-              title="IRON MAN 3"
-              detail="13ส.ค.2561 - 21ส.ค.2561"
-            />
-          </div>
-          <div className="col">
-            <PosterCard
-              image="batman.png"
-              title="BATMAN"
-              detail="13ส.ค.2561 - 21ส.ค.2561"
-            />
-          </div>
-          <div className="col">
-            <PosterCard
-              image="solo.png"
-              title="SOLO"
-              detail="13ส.ค.2561 - 21ส.ค.2561"
-            />
-          </div>
+          {MovieData.map((movies) => {
+            return (
+              <div key={movies.id} className="col-lg-2">
+                <PosterCard 
+                  image={movies.cover}
+                  title={movies.name}
+                  detail={movies.date_range_show}             
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
