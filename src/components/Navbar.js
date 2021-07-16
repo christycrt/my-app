@@ -9,10 +9,10 @@ function Navbar() {
         </ul>
         <ul>
           <li>
-            <a href="#about">MY TICKET</a>
+            <a href="#myTicket">MY TICKET</a>
           </li>
           <li>
-            <a href="#about">ACCOUNT</a>
+            <a href="#account">ACCOUNT</a>
           </li>
         </ul>
       </nav>

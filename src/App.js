@@ -6,12 +6,23 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import PosterCard from "./components/PosterCard";
 import MovieData from "./data/movies.json";
+import MoviePopular from "./data/moviesPopular.json";
+import MovieIsComing from "./data/moviesIscoming.json";
+import MovieSoldout from "./data/moviesSoldout.json";
 
 function App() {
-  const [poster, setPoster] = useState();
+  const [movies, setMovies] = useState(MovieData);
 
-  const ChangePoster = () => {
-    
+  const onChangeMovie = (moviesId) => {
+    if(moviesId === 1) {
+      setMovies(MovieData);
+    } else if(moviesId === 2) {
+      setMovies(MoviePopular);
+    } else if(moviesId === 3) {
+      setMovies(MovieIsComing);
+    } else {
+      setMovies(MovieSoldout);
+    }
   };
 
   return (
@@ -50,16 +61,16 @@ function App() {
       </header>
       <div className="container d-flex justify-content-center">
         <nav className="nav">
-          <a href="" className="nav-item" active-color="#80000">
+          <a href="#" onClick={() => onChangeMovie(1)} className="nav-item" active-color="#80000">
             ALL TICKET
           </a>
-          <a href="" className="nav-item" active-color="#80000">
+          <a href="#" onClick={() => onChangeMovie(2)} className="nav-item" active-color="#80000">
             POPULAR TICKET
           </a>
-          <a href="" className="nav-item" active-color="#80000">
+          <a href="#" onClick={() => onChangeMovie(3)} className="nav-item" active-color="#80000">
             IS COMIMG
           </a>
-          <a href="" className="nav-item" active-color="#80000">
+          <a href="#" onClick={() => onChangeMovie(4)} className="nav-item" active-color="#80000">
             SOLD OUT
           </a>
           <span className="nav-indicator"></span>
@@ -67,7 +78,7 @@ function App() {
       </div>
       <div className="container">
         <div className="row">
-          {MovieData.map((movies) => {
+          {movies.map((movies) => {
             return (
               <div key={movies.id} className="col-lg-2">
                 <PosterCard 
