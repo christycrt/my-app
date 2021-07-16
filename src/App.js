@@ -1,11 +1,19 @@
 import { newExpression } from "jest-snapshot/node_modules/@babel/types";
 import "./App.css";
 
+import { useState } from "react";
+
 import Navbar from "./components/Navbar";
 import PosterCard from "./components/PosterCard";
 import MovieData from "./data/movies.json";
 
 function App() {
+  const [poster, setPoster] = useState();
+
+  const ChangePoster = () => {
+    
+  };
+
   return (
     <div className="App">
       <header>
