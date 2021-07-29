@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <div className="nav-bar">
       <nav className="container d-flex justify-content-between">
         <ul>
           <li>
-            <a href="#home">ACT TICKET</a>
+            <Link to="/">
+              <a href="#home">ACT TICKET</a>
+            </Link>
           </li>
         </ul>
         <ul>
